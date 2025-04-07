@@ -1,0 +1,40 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Probabiliteti i Fitores</title>
+    <style>
+     body { 
+        font-family: Arial; 
+        text-align: center;
+        margin-top: 50px;
+    }
+    .result {
+        font-size: 2em;
+        color: green;
+    } 
+</style>
+</head>
+<body>
+    <h1>Football X – Llogaritësi i Probabilitetit</h1>
+    <p>Ky sistem llogarit sa % ka lojtari të fitojë bazuar në faktorët që vendos ti më poshtë.</p> 
+    <label for="volatility">Zgjidh Volatilitetin:</label> 
+    <select id="volatility"> 
+        <option value="high">I Lartë</option>
+        <option value="medium">Mesatar</option> 
+        <option value="low">I Ulët</option>
+    </select> 
+    <button onclick="calculate()">Llogarit!</button>
+    <p class="result" id="output"></p>
+    <script> 
+     function calculate() { 
+        const volatility = document.getElementById("volatility").value; 
+        let chance;
+        if (volatility === "high") chance = 25;
+        else if (volatility === "medium") chance = 50;
+        else chance = 70 ;
+        documentet.getElementById("output").innerText = 'Shanset per fitore jane rreth${chance}%';
+    }
+    </script>
+    </body>
+</html>
